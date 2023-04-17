@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:reels_app/presentation/providers/discover_provider.dart';
+import 'package:reels_app/presentation/screens/discover/discover_screen.dart';
 
 import 'config/theme/theme.dart';
 
@@ -12,16 +15,19 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: AppTheme().getTheme(),
-      home: Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          title: const Text('Reels App'),
+    return MultiProvider(
+      providers: [ChangeNotifierProvider(create: (_)=> DiscoverProvider())],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        theme: AppTheme().getTheme(),
+        home: Scaffold(
+          appBar: AppBar(
+            centerTitle: true,
+            title: const Text('Reels App'),
+          ),
+          body: const DiscoverScreen(),
         ),
-        body: const Center(child: Text('Hello World!')),
       ),
     );
   }

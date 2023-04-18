@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../config/helpers/human_formats.dart';
 import '../../../domain/entities/videos_post.dart';
 
 
@@ -46,7 +47,7 @@ class _CustomIconButton extends StatelessWidget {
         color: color,
         iconSize: 30,
         ),
-        Text(value.toString())
+        Text( HumanFormats.humanReadbleNumber(value.toDouble()))
       ],
     );
   }

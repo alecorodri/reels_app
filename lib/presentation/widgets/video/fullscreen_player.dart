@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:reels_app/presentation/widgets/video/video_background.dart';
 import 'package:reels_app/shared/data/local_video_post.dart';
 import 'package:video_player/video_player.dart';
 
@@ -54,6 +55,9 @@ class _FullScreenPlayerState extends State<FullScreenPlayer> {
             children: [
               VideoPlayer(controller),
 
+              VideoBackground(
+                stops: const [0.8, 1.0],
+              ),
 
               Positioned(
                 bottom: 50,

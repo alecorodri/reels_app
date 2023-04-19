@@ -23,12 +23,12 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: AppTheme().getTheme(),
-        home: Scaffold(
-          appBar: AppBar(
-            centerTitle: true,
-            title: const Text('Reels App'),
-          ),
-          body: const DiscoverScreen(),
+        home: const Scaffold(
+          // appBar: AppBar(
+          //   centerTitle: true,
+          //   title: const Text('Reels App'),
+          // ),
+          body:  DiscoverScreen(),
         ),
       ),
     );

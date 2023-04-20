@@ -7,7 +7,7 @@ import 'package:reels_app/domain/entities/videos_post.dart';
 import '../../shared/data/local_video_post.dart';
 import '../models/local_video_model.dart';
 
-class LocalVideoDatasource implements VideoPostDatasource {
+class LocalVideoDatasourceImpl implements VideoPostDatasource {
 
   @override
   Future<List<VideoPost>> getFavoriteVideosByUser(String userID) {

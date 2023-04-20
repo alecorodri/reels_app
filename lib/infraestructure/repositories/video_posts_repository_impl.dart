@@ -2,11 +2,11 @@ import 'package:reels_app/domain/datasources/video_posts_datasource.dart';
 import 'package:reels_app/domain/repositories/video_posts_repository.dart';
 import '../../domain/entities/videos_post.dart';
 
-class VideoPostRepository extends VideoPostsRepository{
+class VideoPostRepositoryImpl extends VideoPostsRepository{
 
   final VideoPostDatasource videoPostDatasource;
 
-  VideoPostRepository({required this.videoPostDatasource});
+  VideoPostRepositoryImpl({required this.videoPostDatasource});
 
 
   @override

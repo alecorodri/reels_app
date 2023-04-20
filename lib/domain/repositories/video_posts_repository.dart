@@ -1,9 +1,9 @@
 import 'package:reels_app/domain/entities/videos_post.dart';
 
-abstract class VideoPostRepository {
+abstract class VideoPostsRepository {
 
 
-  Future<List<VideoPost>> getTrendingVideosByUser( String userID);
+  Future<List<VideoPost>> getFavoriteVideosByUser( String userID);
 
   Future<List<VideoPost>> getTrendingVideosByPage( int page);
 

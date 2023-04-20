@@ -19,8 +19,6 @@ class DiscoverProvider extends ChangeNotifier {
 
     //await Future.delayed(const Duration(seconds: 1));
 
-    //TODO: load videos
-
     final List<VideoPost> newVideos = videoPosts.map( (video) => LocalVideoModel.fromJsonMao(video).toVideoPostEntity() ).toList();
 
     videos.addAll(newVideos);
